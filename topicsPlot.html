@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Discussion Topics Plot - Realtime Twitter Analysis</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/topicsPlot.css" />
+    <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css" />
+</head>
+<body>
+    <div id="header">
+        <div id="sourceData"></div>
+        <div id="speedContainer">
+            <span id="speedSpan" class="debugVisible">Speed: <span id="replaySpeed"></span></span>
+            <span id="speedControls">
+                <button id="increaseSpeedButton" class="button speedButton debugVisible"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                <button id="decreaseSpeedButton" class="button speedButton debugVisible"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                <button id="pauseButton" class="button speedButton debugVisible">Pause</button>
+            </span>
+        </div>
+    </div>
+    <div class="debugVisible">Source file: <span id="sourceFile"></span></div>
+    <div class="debugVisible">Tweets: <span id="tweetCount"></span></div>
+    <div class="debugVisible">Current time: <span id="currentTime"></span></div>
+
+    <div>
+        <form id="trackedWordsForm" autocomplete="on">
+            Tracked words:
+            <input type="text" id="trackedWord" />
+            <button id="trackWordButton">Add</button>
+            <button id="removeTrackedWordButton">Remove</button>
+            <button id="truncateTopics">Truncate topics</button>
+        </form>
+        <select id="trackedWordsList"></select>
+    </div>
+    <div id="topicsLineChart"></div>
+
+    <script src="scripts/plotly.js" type="text/javascript"></script>
+    <script src="scripts/lodash.js" type="text/javascript"></script>
+    <script src="scripts/rx.all.js" type="text/javascript"></script>
+    <script src="scripts/moment.js" type="text/javascript"></script>
+
+    <script src="replayscheduler.js" type="text/javascript"></script>
+    <script src="tweetstream.js" type="text/javascript"></script>
+    <script src="dashboard.js" type="text/javascript"></script>
+    <script src="topicsData.js" type="text/javascript"></script>
+    <script src="topicsPlot.js" type="text/javascript"></script>
+    <script src="stopwords.js" type="text/javascript"></script>
+    <script src="tweetRateData.js" type="text/javascript"></script>
+    <script src="charthelper.js" type="text/javascript"></script>
+
+    <script src="data/qanda.turnbull.js" type="text/javascript"></script>
+    <script src="data/qanda.shorten.js" type="text/javascript"></script>
+    <script src="data/dnc.obama.js" type="text/javascript"></script>
+    <script src="data/dnc.hillary.js" type="text/javascript"></script>
+</body>
+</html>

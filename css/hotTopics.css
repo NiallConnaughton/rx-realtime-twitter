@@ -1,0 +1,18 @@
+﻿#hotTopics {
+    margin-left: 100px;
+}
+
+#hotTopics .timestamp {
+    color: #cccccc;
+}
+
+#hotTopics .topics {
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#hotTopicsContainer {
+    border-top: 2px solid #888;
+    margin-top: 30px;
+    padding-top: 20px;
+}
